@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-pink: #ff6b6b;
+            --white-glass: rgba(255, 255, 255, 0.85);
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: 'Quicksand', sans-serif;
+            overflow: hidden;
+            text-align: center;
+            
+            /* --- PHOTO BACKGROUND SETTINGS --- */
+            /* Replace 'your-photo.jpg' with your actual image URL or local file path */
+            background-image: url('https://i.postimg.cc/hGwyD4hz/1744114354512.jpg'); 
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        /* Overlay to make sure text is readable over the photo */
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.3); /* Darkens the photo slightly */
+            z-index: 1;
+        }
+
+        .card {
+            background: var(--white-glass);
+            backdrop-filter: blur(10px); /* Blurs the photo behind the card */
+            padding: 2.5rem 1.5rem;
+            border-radius: 30px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+            width: 85%;
+            max-width: 380px;
+            z-index: 10;
+            border: 2px solid rgba(255,255,255,0.5);
+        }
+
+        .name-highlight {
+            display: block;
+            font-size: 1.5rem;
+            color: #333;
+            margin-top: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        h1 {
+            font-family: 'Pacifico', cursive;
+            color: var(--primary-pink);
+            font-size: 2.8rem;
+            margin: 0;
+            text-shadow: 2px 2px 0px rgba(255,255,255,0.5);
+        }
+
+        p {
+            color: #222;
+            line-height: 1.6;
+            font-size: 1.1rem;
+            margin: 20px 0;
+        }
+
+        .btn {
+            background: var(--primary-pink);
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 6px 20px rgba(255, 107, 107, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        .btn:active { transform: scale(0.95); }
+
+        @media (max-width: 480px) {
+            h1 { font-size: 2.2rem; }
+            .card { padding: 2rem 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+<img src="https://WhatsApp Image 2026-03-30 at 3.11.32 PM"
+        <h1>Happy Birthday</h1>
+        <span class="name-highlight">Adhithya </span> 
+        
+        <p>I miss you adhi.ee birthday kk koode indavan pattilla pakshe nte manas epozhum ninte koode ind .once again HBD Adhi .there is no better gift than you</p>
+        
+        <button class="btn" onclick="fireConfetti()">Celebrate! 🎉</button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+    <script>
+        window.onload = () => { setTimeout(fireConfetti, 500); };
+
+        function fireConfetti() {
+            confetti({
+                particleCount: 150,
+                spread: 70,
+                origin: { y: 0.6 },
+                zIndex: 1000
+            });
+        }
+    </script>
+</body>
+</html>
